@@ -1,0 +1,11 @@
+1)
+SELECT nome, cognome from clienti where data_nascita >='1982-01-01' and data_nascita <'1983-01-01'
+
+2)
+SELECT count(*) from fatture where iva=20
+
+3)
+SELECT count(*), sum(importo) from fatture group by data_fattura
+
+4)
+SELECT * from prodotti where data_attivazione>'2017-01-01' and in_produzione='true' and in_commercio='true'
