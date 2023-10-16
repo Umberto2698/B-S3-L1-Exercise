@@ -16,6 +16,9 @@ Select count(*) from fatture where iva=20 group by data_fattura
 6)
 Select data_fattura from fatture where (select count(*) from fatture where tipologia='A')>2
 
+7)
+select numero_fattura, importo, iva, data_fattura, (select denominazione from fornitori where fatture.numero_fornitore=fornitori.numero_fornitore) as denominazione from fatture
+
 8)
 select sum(importo) from fatture group by (select regione_residenza from clienti where fatture.id_cliente=clienti.numero_cliente)
 
