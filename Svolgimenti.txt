@@ -21,3 +21,6 @@ select sum(importo) from fatture group by (select regione_residenza from clienti
 
 9)
 select count(*) from clienti where data_nascita>='1980-01-01' and data_nascita<'1981-01-01' and (select importo from fatture where clienti.numero_cliente=fatture.id_cliente )>50
+
+10)
+Select concat (nome, '-',cognome) as denominazione from clienti where regione_residenza='Lombardia'
