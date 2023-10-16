@@ -16,5 +16,8 @@ Select count(*) from fatture where iva=20 group by data_fattura
 6)
 Select data_fattura from fatture where (select count(*) from fatture where tipologia='A')>2
 
-7)
+8)
 select sum(importo) from fatture group by (select regione_residenza from clienti where fatture.id_cliente=clienti.numero_cliente)
+
+9)
+select count(*) from clienti where data_nascita>='1980-01-01' and data_nascita<'1981-01-01' and (select importo from fatture where clienti.numero_cliente=fatture.id_cliente )>50
