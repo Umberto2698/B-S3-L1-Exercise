@@ -8,7 +8,7 @@ SELECT count(*) from fatture where iva=20
 SELECT count(*), sum(importo) from fatture group by data_fattura
 
 4)
-SELECT * from prodotti where data_attivazione>='2017-01-01' and (in_produzione='true' or in_commercio='true')
+SELECT * from prodotti where data_attivazione>='2017-01-01' and data_attivazione<'2018-01-01' and (in_produzione='true' or in_commercio='true')
 
 5)
 Select count(*) from fatture where iva=20 group by data_fattura
